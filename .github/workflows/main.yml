@@ -1,4 +1,4 @@
-name: CI/CD Workflow
+name: "projet-1"
 
 # Variables d'environnement globales
 env:
