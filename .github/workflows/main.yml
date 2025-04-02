@@ -2,13 +2,13 @@ name: CI/CD Workflow
 
 # Variables d'environnement globales
 env:
-  SERVER_USER: "root" # Utilisateur du serveur
-  SERVER_IP: "20.47.71.43 # Adresse IP du serveur
+  SERVER_USER: "root"
+  SERVER_IP: "20.47.71.43"
 
-# Gestion de la concurrence des jobs
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }} # Groupe basé sur le nom du workflow et la référence git
-  cancel-in-progress: true # Annule les jobs en cours si un nouveau push est effectué
+  # Gestion de la concurrence des jobs
+  concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 # Événements déclenchant le workflow
 on:
@@ -93,7 +93,7 @@ jobs:
       - name: Déployer sur le serveur
         run: |
           eval $(ssh-agent -s)
-          ssh-add - <<< "${{ secrets.AZURE_PROD_PKEY }}"
+          ssh-add - <<< "${{secrets.AZURE_PROD_PKEY}}"
           mkdir -p ~/.ssh
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
           scp -r ./dist/* $SERVER_USER@$SERVER_IP:/var/www/client
