@@ -1,0 +1,50 @@
+# Node.js modules
+node_modules/
+bower_components/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+build/
+dist/
+coverage/
+tmp/
+temp/
+
+# IDE files
+.vscode/
+.idea/
+
+# dotenv configuration file (si tu utilises un fichier .env pour tes variables d'environnement)
+.env
+
+# PM2 logs
+pmsystem/
+
+# Frontend build (si tu utilises un bundler comme Webpack, Parcel, etc.)
+client/dist/
+client/build/
+
+# Next.js (si tu utilises Next.js côté frontend)
+.next/
+
+# Vue.js (si tu utilises Vue.js côté frontend)
+*.local
+
+# TSLint ou ESLint configuration
+eslintcache/
+
+# Logs de tests et autres fichiers de cache
+test-coverage/
+jest-cache/
