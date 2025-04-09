@@ -2,7 +2,7 @@ name: CI/CD workflow
 
 env:
   SERVER_USER: "root"
-  SERVER_IP: "20.47.71.43"
+  SERVER_IP: "172.161.30.146"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
