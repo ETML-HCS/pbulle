@@ -72,7 +72,7 @@ jobs:
       - name: Build du frontend
         run: cd client && npm run build
       - name: Upload de l'artéfact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: frontend-dist
           path: client/dist/
