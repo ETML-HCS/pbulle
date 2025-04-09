@@ -104,11 +104,11 @@ jobs:
       - name: Checkout le code
         uses: actions/checkout@v4
 
-      - name: Télécharger l'artéfact du frontend
+      - name: récupérer l'artéfact du frontend pour les tests e2e
         uses: actions/download-artifact@v4
         with:
-          name: frontend-dist
-          path: client/dist/
+          name: frontend-dist-e2e
+          path: ./client/dist
 
       - name: Installer Node.js
         uses: actions/setup-node@v3
@@ -122,7 +122,7 @@ jobs:
       - name: Lancer le serveur backend
         run: |
           cd server
-          nohup node index.js &
+          node index.js &
 
       - name: Lancer les tests Cypress
         uses: cypress-io/github-action@v6
