@@ -108,7 +108,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-dist-e2e
-          path: ./client/dist
+          path: client/dist
 
       - name: Installer Node.js
         uses: actions/setup-node@v3
